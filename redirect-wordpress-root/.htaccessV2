@@ -1,0 +1,11 @@
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+# Redirect all files and directories which are not accessible on root to /tr
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /tr/index.php [L]
+</IfModule>
+# END WordPress
